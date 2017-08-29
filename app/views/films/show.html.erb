@@ -3,3 +3,5 @@
 <h2><%=@film.year%></h2>
 <h3><%=@film.synopsis%></h3>
 <%=image_tag @film.image%>
+<%= button_to "EDIT", edit_film_path(@film), method: :get %>
+<%= button_to "DELETE", film_path(@film), method: :delete %>
