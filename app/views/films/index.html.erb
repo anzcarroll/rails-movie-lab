@@ -1,3 +1,9 @@
-<h1><%=@film.title%></h1>
-<%= image_tag @film.image%>
+<h1> LIST OF ALL THE BADASS MOVIES </h1>
+
+<% @film.each do |film| %>
+<li>
+<%= link_to film.title, film_path(film) %>
+</li>
+<% end %>
+
 
